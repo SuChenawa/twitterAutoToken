@@ -47,6 +47,7 @@ jobs:
             cd guest
             python auto_token.py
             rm phantomjs
+            rm ghostdriver.log
             ls
             cat token.json
             
