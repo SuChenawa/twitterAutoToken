@@ -33,6 +33,7 @@ jobs:
               python-version: 3.9
       - name: Prepare for python
         run: |
-            cd token
+            cd guest
             ls
+            python --version
   
