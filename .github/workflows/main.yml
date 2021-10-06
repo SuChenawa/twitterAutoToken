@@ -41,14 +41,22 @@ jobs:
             tar -xjf phantomjs-2.1.1-linux-x86_64.tar.bz2
             cp ./phantomjs-2.1.1-linux-x86_64/bin/phantomjs ./
             rm -r phantomjs-2.1.1-linux-x86_64
-            ls
       - name: Run
         run: |
             cd guest
             python auto_token.py
             rm phantomjs
             rm ghostdriver.log
-            ls
-            cat token.json
+      - name: commit
+        run: |
+            git config --global user.email 9173011623@njau.edu.cn
+            git config --global user.name kanomahoro
+            git add .
+            git commit -m "update" -a
+            
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+             github_token: ${{ secrets.GITHUB_TOKEN }}
             
   
