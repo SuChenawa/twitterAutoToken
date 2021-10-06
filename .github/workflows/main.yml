@@ -42,4 +42,12 @@ jobs:
             cp ./phantomjs-2.1.1-linux-x86_64/bin/phantomjs ./
             rm -r phantomjs-2.1.1-linux-x86_64
             ls
+      - name: Run
+        run: |
+            cd guest
+            python auto_token.py
+            rm phantomjs
+            ls
+            cat token.json
+            
   
