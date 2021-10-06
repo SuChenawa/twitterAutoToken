@@ -31,8 +31,14 @@ jobs:
         uses: actions/setup-python@v2
         with:
               python-version: 3.9
-      - name: Prepare for python
+      - name: Prepare for python Environment
         run: |
             cd guest
             pip install -r requirements.txt
+      - name: Prepare for PhantoJS
+        run: |
+            tar -xjf phantomjs-2.1.1-linux-x86_64.tar.bz2
+            cp ./phantomjs-2.1.1-linux-x86_64/bin/phantomjs ./
+            rm -r phantomjs-2.1.1-linux-x86_64
+            ls
   
