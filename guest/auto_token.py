@@ -17,5 +17,5 @@ driver.get("https://mobile.twitter.com/Twitter")
 driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
 time.sleep(10)
 data=driver.get_cookie('gt')
-with open('/root/api/token.json','w',encoding='utf-8') as fp:
+with open('token.json','w',encoding='utf-8') as fp:
     json.dump(data,fp)
