@@ -11,7 +11,7 @@ chrome_options.add_argument('blink-settings=imagesEnabled=false') #不加载图�
 chrome_options.add_argument('--headless') #浏览器不提供可视化页面. linux下如果系统不支持可视化不加这条会启动失败
  
 #创建浏览器对象
-driver = webdriver.Chrome(executable_path='./chromedriver',chrome_options=chrome_options)#executable_path:浏览器驱动路径
+driver = webdriver.Chrome(chrome_options=chrome_options)#executable_path:浏览器驱动路径
 driver.delete_all_cookies()
 driver.get("https://mobile.twitter.com/Twitter")
 driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
