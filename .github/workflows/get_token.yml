@@ -4,6 +4,7 @@ name: guest_token
 
 # Controls when the workflow will run
 on:
+  # If you want enable auto update twitter guest token,you must Uncomment the following two lines!
   # schedule:
   #   - cron: '*/60  * * * *'
   workflow_dispatch:
@@ -41,8 +42,8 @@ jobs:
             python auto_token.py
       - name: commit
         run: |
-            git config --global user.email 9173011623@njau.edu.cn
-            git config --global user.name kanomahoro
+            git config --global user.email your email-address
+            git config --global user.name your username
             git add .
             git commit -m "update" -a
             
