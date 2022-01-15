@@ -42,8 +42,8 @@ jobs:
             python auto_token.py
       - name: commit
         run: |
-            git config --global user.email your email-address
-            git config --global user.name your username
+            git config --global user.email wjl1303121277@gmail.com
+            git config --global user.name your wjl1303121277@gmail.com
             git add .
             git commit -m "update" -a
             
